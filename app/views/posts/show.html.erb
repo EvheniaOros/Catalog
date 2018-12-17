@@ -1,0 +1,11 @@
+User: <%= @post.user.email %><br />
+Title:<%= @post.title %><br />
+Description: <%= @post.description %><br />
+Price: <%= @post.price %><br />
+<% if @post.user_id == current_user.id %>
+
+<%= link_to "Edit", edit_post_path(@post.id) %><br />
+
+<%= link_to "Delete", post_path(@post.id), method: :delete %><br />
+
+<% end %>

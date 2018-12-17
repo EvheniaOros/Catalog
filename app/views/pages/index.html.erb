@@ -1,0 +1,11 @@
+<h1>Catalog</h1>
+<p>Please log in or sign up</p>
+<%= link_to "Login", new_user_session_path %><br />
+<%= link_to "Logout", destroy_user_session_path, method: :delete %><br />
+
+<% if !current_user.nil? %>
+	 <%= link_to "Profile", userparam_path(current_user.id) %> |
+  <% end %>
+    <%= link_to "Create new post",  new_post_path %> |
+    
+    

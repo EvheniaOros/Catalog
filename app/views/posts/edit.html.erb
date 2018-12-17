@@ -1,0 +1,9 @@
+<%= form_for @post, url: post_path(@post.id) do |f| %>
+
+
+Title<%= f.text_field :title%><br>
+Description<%= f.text_field :description%><br>
+Price<%= f.text_field :price%><br>
+<%= f.submit "Create" %>
+	
+<% end %>

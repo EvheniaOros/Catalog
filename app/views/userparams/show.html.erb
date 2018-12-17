@@ -1,0 +1,6 @@
+<h1>This is youre profile</h1>
+
+Firstname: <%= current_user.userparam.firstname %><br />
+Lastname:<%= current_user.userparam.lastname %><br />
+Age: <%= current_user.userparam.age %><br />
+<%= link_to "Edit", edit_userparam_path(current_user.id) %><br />
